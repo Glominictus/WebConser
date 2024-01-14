@@ -6,19 +6,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 
-import './index.css';
+
 
 export const NavBar = () => {
 
     const centro = [
         { label: 'Novas', path: '/centro/novas' },
-        { label: 'Benvida', path: '/centro/novas' },
-        { label: 'Historia', path: '/centro/novas' },
-        { label: 'Onde estamos', path: '/centro/novas' },
-        { label: 'Instalacións', path: '/centro/novas' },
-        { label: 'Organigrama', path: '/centro/novas' },
-        { label: 'Calendario de Actividades', path: '/centro/novas' },
-        { label: 'Formacións', path: '/centro/novas' },
+        { label: 'Benvida', path: '/centro/benvida' },
+        { label: 'Historia', path: '/centro/historia' },
+        { label: 'Onde estamos', path: '/centro/onde-estamos' },
+        { label: 'Instalacións', path: '/centro/instalacions' },
+        { label: 'Organigrama', path: '/centro/organigrama' },
+        { label: 'Calendario de Actividades', path: '/centro/calendario' },
+        { label: 'Formacións', path: '/centro/formacions' },
     ];
 
     const conservatorio = [
@@ -44,9 +44,7 @@ export const NavBar = () => {
         { label: 'Bolsas', path: '/secretaria/bolsas' },
         { label: 'Contacto', path: '/secretaria/contacto' },
         { label: 'Impresos', path: '/secretaria/impresos' },
-        { label: 'Bolsas', path: '/secretaria/bolsas' },
         { label: 'Título', path: '/secretaria/titulo' },
-        { label: 'Bolsas', path: '/secretaria/bolsas' },
         { label: 'Lexislación', path: '/secretaria/lexislacion' },
         { label: 'Traslado de Expediente', path: '/secretaria/traslado-expediente' },
         { label: 'Validacións', path: '/secretaria/validacions' },
@@ -81,11 +79,11 @@ export const NavBar = () => {
     );
 
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
-            <Container>
+        <Navbar  className='navbar' variant="dark" expand="lg">
+            <Container fluid> 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto w-100 justify-content-around">
                         <Nav.Link as={NavLink} to="/">Inicio</Nav.Link>
                         {renderNavDropdown(centro, 'Centro')}
                         {renderNavDropdown(conservatorio, 'Conservatorio')}
@@ -98,4 +96,5 @@ export const NavBar = () => {
             </Container>
         </Navbar>
     )
+    
 }
