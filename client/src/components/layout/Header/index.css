@@ -1,3 +1,78 @@
-h1{
-    color:red;
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+.header {
+    width: 100%; 
+    height: 200px; 
+    display: flex;
+    background-color: white;
+    position: relative;
+
+}
+.header::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../../assets/img/fondo_header2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+}
+
+
+.header-logo-container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%; 
+    margin-left: 10px; 
+}
+
+.header-logo-container img {
+    height: 130px;
+}
+
+.header-logo-title {
+    color: #0678a2;
+    font-size: 60px;
+    margin-left: 10px;
+    
+}
+
+.header-title {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    margin-top: 10px;     
+}
+
+.header-title h1 {
+    margin: 0; 
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 48px;
+}
+/*Pendientes de cambiar los tamaños si queda muy grande*/
+@media (max-width: 991px) {
+    .header {
+        flex-direction: column; 
+        height: auto; 
+    }
+
+    .header-logo-container {
+        justify-content: center; 
+        margin-bottom: 20px; 
+    }
+
+    .header-title {
+        width: 100%; 
+        position: static; 
+        justify-content: center;
+        margin-top: 0; 
+    }
 }
