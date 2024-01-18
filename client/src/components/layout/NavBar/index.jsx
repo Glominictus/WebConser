@@ -2,11 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-
-
-
 
 export const NavBar = () => {
 
@@ -84,7 +80,7 @@ export const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto w-100 justify-content-around">
-                        <Nav.Link as={NavLink} to="/">Inicio</Nav.Link>
+                        <Nav.Link as={NavLink} to="/" >Inicio</Nav.Link>
                         {renderNavDropdown(centro, 'Centro')}
                         {renderNavDropdown(conservatorio, 'Conservatorio')}
                         {renderNavDropdown(acceso, 'Acceso')}
