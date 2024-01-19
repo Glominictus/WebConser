@@ -5,18 +5,17 @@ import { Row, Col } from 'react-bootstrap';
 
 export const Inicio = () => {
     return (
-        <div className='inicio_wrapper'>
-            <div className='noticias-cortas-index'>
-                <div className='noticias-cortas-index-title'>
-                    <h2>Últimas noticias</h2>
-                </div>
-                <Row className='noticias-cortas-grid-container'>
-                    <Col lg={4} xs={12}><NoticiasCortas /></Col>
-                    <Col lg={4} xs={12}><NoticiasCortas /></Col>
-                    <Col lg={4} xs={12}><NoticiasCortas /></Col>
-                </Row>
-                </div>
+        <div className='noticias-cortas-index'>
+            <div className='noticias-cortas-titulo'>
+                <h2>ÚLTIMAS NOTICIAS</h2>
             </div>
-        
-    )
+
+            <Row className='ultimas__noticias-grid-container'>
+                <Col lg={3} xs={12} className="noticia-col"><NoticiasCortas /></Col>
+                <Col lg={3} xs={12} className="noticia-col"><NoticiasCortas /></Col>
+                <Col lg={3} xs={12} className="noticia-col"><NoticiasCortas /></Col>
+            </Row>
+
+        </div>
+    );
 }
