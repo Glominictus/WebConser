@@ -1,0 +1,29 @@
+
+.noticias-cortas-img img{
+    height: 100%;
+    width: 100%;
+    margin-left: 50%;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+}
+.noticias-cortas-contenido{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: 50%;
+    background-color: rgba(196, 223, 230, 0.8);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+.noticias-cortas-contenido p {
+    margin: 0 20px 30px;
+}
+.noticias-cortas-contenido div{
+    display: flex;
+    flex-direction: column;
+}
+.espaciado {
+    padding-bottom: 30px;
+}

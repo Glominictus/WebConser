@@ -20,7 +20,7 @@ export const Footer = () => {
                 <a href="../aviso-legal.html">AVISO LEGAL |</a>
                 <a href="../privacidade.html">PRIVACIDADE |</a>
                 <a href="../cookies.html">COOKIES</a>
-                <p>Copyright &copy 2021 <b>Conservatorio e Escola de Música de O Barco de Valdeorras</b>.</p>
+                <p>Copyright &copy; 2024 <b>Conservatorio e Escola de Música de O Barco de Valdeorras</b>.</p>
             </div>
         </div>
     )
