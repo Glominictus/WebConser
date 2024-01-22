@@ -12,16 +12,24 @@ return (
     </div>
     )
 }
+
 export const BotonContacto = () => {
+    const [mostrarBoton, setMostrarBoton] = useState(false);
+    const handleMouseEnter = () => {
+        setMostrarBoton(true);
+    };
+    const handleMouseLeave = () => {
+        setMostrarBoton(false);
+    };
     const handleClick = () => {
         alert('¡Haz clic en el botón!');
     };
     return (
-        <div className='body-boton'>
+        <div className='body-boton' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <button className='body-boton-contacto' onClick={handleClick}>
                 Haz clic en mí
             </button>
         </div>
-    )
-}
+    );
+};
 export default BotonContacto;
