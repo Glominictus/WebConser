@@ -14,14 +14,14 @@ export const Rutas = () => {
         <div className="site-container"> {/* Contenedor del sitio con CSS Grid */}
             <Header/>
             <NavBar/>
+            <Body/>
+            <BotonContacto/>
             <main className="main-content"> {/* Contenido principal */}
                 <Routes>
                     <Route path="/" element={<Inicio />} />
                     <Route path="/Inicio" element={<Inicio />} />
                 </Routes>
             </main>
-            <Body/>
-            <BotonContacto/>
             <Footer/>
         </div>
     </BrowserRouter>

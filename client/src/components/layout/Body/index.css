@@ -22,20 +22,24 @@
 }*/
 .body-boton-contacto {
     display: flex;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* ajusta el ancho según tus necesidades */
+    height: 50px; /* ajusta la altura según tus necesidades */
+    border-radius: 10px; /* bordes redondeados */
+    background-color: #3498db; /* color de fondo */
+    color: #fff; /* color del texto */
+    font-size: 16px; /* tamaño del texto */
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    border: none;
-    border-radius: 10px;
-    margin-left: 10%;
-    box-shadow: 0 4px 6px rgba(180, 27, 27, 0.99);
+    outline: none; /* elimina el contorno al hacer clic */
+    border: none; /* elimina el borde predeterminado */
+    transition: background-color 0.3s ease; /* transición de color de fondo */
+}
+
+
 }
 .body-boton-contacto:hover {
-    background-color: #4CAF50; /* Color de fondo al hacer hover */
+    background-color: #0678a2; /* color de fondo al pasar el ratón */
     color: #fff; /* Color del texto al hacer hover */
     transform: scale(1.05); /* Efecto de escala al hacer hover */
 }
