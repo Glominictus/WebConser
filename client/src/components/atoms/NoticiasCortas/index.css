@@ -24,3 +24,11 @@
 .espaciado {
     padding-bottom: 30px;
 }
+
+@media (max-width: 991px){
+    .noticias-cortas-container{
+        width:90%;
+        margin:auto;
+        padding-top:20px;
+    }
+}

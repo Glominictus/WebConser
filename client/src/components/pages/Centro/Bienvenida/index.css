@@ -1,0 +1,49 @@
+.bienvenida_header_titulo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bienvenida_container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: auto;
+    width: 80%;
+}
+
+/*
+.bienvenida_container p{
+    font-size: 1.2em;
+}
+*/
+.bienvenida_container_img {
+    float: right;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.bienvenida_container_texto {
+    text-align: justify;
+}
+
+.bienvenida_container_saludo {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    margin: 20px;
+}
+
+.bienvenida_container_facebook {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bienvenida_container_youtube {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}

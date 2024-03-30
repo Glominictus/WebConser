@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    bottom:0;
 }
 .footer-up {
     display: flex;
