@@ -1,3 +1,72 @@
-.navbar{
-    background-color: #0678a2;
+.navbar {
+  --navbar-text: rgba(255, 255, 255, 0.95);
+  --navbar-text-muted: rgba(255, 255, 255, 0.82);
+  --navbar-hover-bg: color-mix(in srgb, #000 12%, var(--color-brand));
+
+  background-color: var(--color-brand);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link {
+  color: var(--navbar-text);
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link:hover,
+.navbar.navbar-dark .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar .dropdown-toggle::after {
+  vertical-align: 0.15em;
+}
+
+.navbar .dropdown-menu {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-text) 12%, transparent);
+  margin-top: 0.35rem;
+}
+
+.navbar .dropdown-item {
+  color: var(--color-text);
+  padding: 0.45rem 1rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: color-mix(in srgb, var(--color-brand) 10%, var(--color-surface));
+  color: var(--color-text);
+}
+
+.navbar .dropdown-item.active {
+  background-color: color-mix(in srgb, var(--color-brand) 18%, var(--color-surface));
+  color: var(--color-brand-hover);
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border-color: color-mix(in srgb, #fff 35%, transparent);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, #fff 35%, transparent);
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    padding-left: 0.75rem;
+  }
 }

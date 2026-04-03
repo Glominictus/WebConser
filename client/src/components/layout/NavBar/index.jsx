@@ -1,118 +1,122 @@
-import React from 'react';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import  TasasConservatorio from '../../../assets/docs/TasasConservatorio.pdf'
-import  TasasEscola  from '../../../assets/docs/tasas-escola.pdf'
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import TasasConservatorio from '../../../assets/docs/TasasConservatorio.pdf'
+import TasasEscola from '../../../assets/docs/tasas-escola.pdf'
 
-import './index.css';
+import './index.css'
 
 export const NavBar = () => {
+  const { t } = useTranslation()
 
-    const centro = [
-        { label: 'Novas', path: '/centro/novas' },
-        { label: 'Benvida', path: '/centro/benvida' },
-        { label: 'Historia', path: '/centro/historia' },
-        { label: 'Onde estamos', path: '/centro/onde-estamos' },
-        { label: 'Instalacións', path: '/centro/instalacions' },
-        { label: 'Organigrama', path: '/centro/organigrama' },
-        { label: 'Calendario de Actividades', path: '/centro/calendario' },
-        { label: 'Formacións', path: '/centro/formacions' },
-    ];
+  const centro = [
+    { key: 'novas', path: '/centro/novas' },
+    { key: 'benvida', path: '/centro/benvida' },
+    { key: 'historia', path: '/centro/historia' },
+    { key: 'ondeEstamos', path: '/centro/onde-estamos' },
+    { key: 'instalacions', path: '/centro/instalacions' },
+    { key: 'organigrama', path: '/centro/organigrama' },
+    { key: 'calendarioActividades', path: '/centro/calendario' },
+    { key: 'formacions', path: '/centro/formacions' },
+  ]
 
-    const conservatorio = [
-        { label: 'Oferta Académica', path: '/conservatorio/oferta-academica' },
-        { label: 'Plan de Estudos', path: '/conservatorio/plan-estudos' },
-        { label: 'Programacións Didácticas', path: '/conservatorio/programacions-didacticas' },
-        { label: 'Departamentos', path: '/conservatorio/departamentos' },
-        { label: 'Horarios', path: '/conservatorio/horarios' },
-        { label: 'Prezos Públicos', path: TasasConservatorio, isPdf: true },
-        { label: 'Solicitude de Titoría', path: '/conservatorio/solicitude-titoria' },
-        { label: 'Horario de Titorías', path: '/conservatorio/horario-titoria' },
-        { label: 'Documentos', path: '/conservatorio/documentos' },
-    ];
+  const conservatorio = [
+    { key: 'ofertaAcademica', path: '/conservatorio/oferta-academica' },
+    { key: 'planEstudos', path: '/conservatorio/plan-estudos' },
+    { key: 'programacionsDidacticas', path: '/conservatorio/programacions-didacticas' },
+    { key: 'departamentos', path: '/conservatorio/departamentos' },
+    { key: 'horarios', path: '/conservatorio/horarios' },
+    { key: 'prezosPublicos', path: TasasConservatorio, isPdf: true },
+    { key: 'solicitudeTitoria', path: '/conservatorio/solicitude-titoria' },
+    { key: 'horarioTitorias', path: '/conservatorio/horario-titoria' },
+    { key: 'documentos', path: '/conservatorio/documentos' },
+  ]
 
-    const acceso = [
-        { label: 'Solicitude de Praza', path: '/acceso/solicitude-praza' },
-        { label: '1º Grao Elemental', path: '/acceso/primeiro-elemental' },
-        { label: '1º Grao Profesional', path: '/acceso/primeiro-profesional' },
-        { label: 'Outros Cursos', path: '/acceso/outros-cursos' },
-    ];
+  const acceso = [
+    { key: 'solicitudePraza', path: '/acceso/solicitude-praza' },
+    { key: 'primeiroElemental', path: '/acceso/primeiro-elemental' },
+    { key: 'primeiroProfesional', path: '/acceso/primeiro-profesional' },
+    { key: 'outrosCursos', path: '/acceso/outros-cursos' },
+  ]
 
-    const secretaria = [
-        { label: 'Bolsas', path: 'https://www.educacionyfp.gob.es/gl/servicios-al-ciudadano/catalogo/estudiantes/becas-ayudas/para-estudiar/artisticas/becas-generales-no-universitarias.html', isExternal: true },
-        { label: 'Contacto', path: '/secretaria/contacto' },
-        { label: 'Impresos', path: '/secretaria/impresos' },
-        { label: 'Título', path: '/secretaria/titulo' },
-        { label: 'Lexislación', path: '/secretaria/lexislacion' },
-        { label: 'Traslado de Expediente', path: '/secretaria/traslado-expediente' },
-        { label: 'Validacións', path: '/secretaria/validacions' },
-    ];
+  const secretaria = [
+    {
+      key: 'bolsas',
+      path: 'https://www.educacionyfp.gob.es/gl/servicios-al-ciudadano/catalogo/estudiantes/becas-ayudas/para-estudiar/artisticas/becas-generales-no-universitarias.html',
+      isExternal: true,
+    },
+    { key: 'contacto', path: '/secretaria/contacto' },
+    { key: 'impresos', path: '/secretaria/impresos' },
+    { key: 'titulo', path: '/secretaria/titulo' },
+    { key: 'lexislacion', path: '/secretaria/lexislacion' },
+    { key: 'trasladoExpediente', path: '/secretaria/traslado-expediente' },
+    { key: 'validacions', path: '/secretaria/validacions' },
+  ]
 
-    const multimedia = [
-        { label: 'Acerca das Imaxes e dos Videos', path: '/multimedia/about' },
-        { label: 'Imaxes', path: '/multimedia/imaxes' },
-        { label: 'Videos', path: '/multimedia/videos' },
-    ];
+  const multimedia = [
+    { key: 'about', path: '/multimedia/about' },
+    { key: 'imaxes', path: '/multimedia/imaxes' },
+    { key: 'videos', path: '/multimedia/videos' },
+  ]
 
-    const escolaDeMusica = [
-        { label: 'Escola', path: '/escola-de-musica/escola' },
-        { label: 'Plan de Estudos', path: '/escola-de-musica/plan-estudos' },
-        { label: 'Solicitude de Praza', path: '/escola-de-musica/solicitude-praza' },
-        { label: 'Solicitude de Titoría', path: '/escola-de-musica/solicitude-titoria' },
-        { label: 'Horario de Titorías', path: '/escola-de-musica/horario-titoria' },
-        { label: 'Cronograma', path: '/escola-de-musica/cronograma' },
-        { label: 'Prezos Públicos', path: TasasEscola, isPdf: true },
-        { label: 'Documentos', path: '/escola-de-musica/documentos' },
-        { label: 'Impresos', path: '/escola-de-musica/impresos' },
-        { label: 'Horarios', path: '/escola-de-musica/horarios' },
-    ];
+  const escolaDeMusica = [
+    { key: 'escola', path: '/escola-de-musica/escola' },
+    { key: 'planEstudos', path: '/escola-de-musica/plan-estudos' },
+    { key: 'solicitudePraza', path: '/escola-de-musica/solicitude-praza' },
+    { key: 'solicitudeTitoria', path: '/escola-de-musica/solicitude-titoria' },
+    { key: 'horarioTitorias', path: '/escola-de-musica/horario-titoria' },
+    { key: 'cronograma', path: '/escola-de-musica/cronograma' },
+    { key: 'prezosPublicos', path: TasasEscola, isPdf: true },
+    { key: 'documentos', path: '/escola-de-musica/documentos' },
+    { key: 'impresos', path: '/escola-de-musica/impresos' },
+    { key: 'horarios', path: '/escola-de-musica/horarios' },
+  ]
 
-    const renderNavDropdown = (items, title) => (
-        <NavDropdown title={title} id={`nav-dropdown-${title.toLowerCase()}`}>
-            {items.map((item, idx) => {
-                if (item.isExternal) {
-                    return (
-                        <NavDropdown.Item key={idx} href={item.path} target="_blank" rel="noopener noreferrer">
-                            {item.label}
-                        </NavDropdown.Item>
-                    );
-                } else if (item.isPdf) {
-                    return (
-                        // Para los PDFs utilizamos un elemento <a> directamente
-                        // Esto permite abrir el PDF en una nueva pestaña
-                        <NavDropdown.Item key={idx} as="a" href={item.path} target="_blank" rel="noopener noreferrer">
-                            {item.label}
-                        </NavDropdown.Item>
-                    );
-                } else {
-                    // Enlaces internos siguen utilizando NavLink
-                    return (
-                        <NavDropdown.Item key={idx} as={NavLink} to={item.path}>
-                            {item.label}
-                        </NavDropdown.Item>
-                    );
-                }
-            })}
-        </NavDropdown>
-    );
+  const renderNavDropdown = (titleKey, itemKey, items) => (
+    <NavDropdown title={t(`nav.sections.${titleKey}`)} id={`nav-dropdown-${titleKey}`}>
+      {items.map((item, idx) => {
+        const label = t(`nav.${itemKey}.${item.key}`)
+        if (item.isExternal) {
+          return (
+            <NavDropdown.Item key={idx} href={item.path} target="_blank" rel="noopener noreferrer">
+              {label}
+            </NavDropdown.Item>
+          )
+        }
+        if (item.isPdf) {
+          return (
+            <NavDropdown.Item key={idx} as="a" href={item.path} target="_blank" rel="noopener noreferrer">
+              {label}
+            </NavDropdown.Item>
+          )
+        }
+        return (
+          <NavDropdown.Item key={idx} as={NavLink} to={item.path}>
+            {label}
+          </NavDropdown.Item>
+        )
+      })}
+    </NavDropdown>
+  )
 
-    return (
-        <Navbar className='navbar' variant="dark" expand="lg">
-            <Container fluid>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto w-100 justify-content-around">
-                        <Nav.Link as={NavLink} to="/" >Inicio</Nav.Link>
-                        {renderNavDropdown(centro, 'Centro')}
-                        {renderNavDropdown(conservatorio, 'Conservatorio')}
-                        {renderNavDropdown(acceso, 'Acceso')}
-                        {renderNavDropdown(secretaria, 'Secretaria')}
-                        {renderNavDropdown(multimedia, 'Multimedia')}
-                        {renderNavDropdown(escolaDeMusica, 'Escola de Musica')}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    )
-
+  return (
+    <Navbar className="navbar" variant="dark" expand="lg">
+      <Container fluid>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label={t('nav.toggle')} />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto w-100 justify-content-around">
+            <Nav.Link as={NavLink} to="/">
+              {t('nav.inicio')}
+            </Nav.Link>
+            {renderNavDropdown('centro', 'centro', centro)}
+            {renderNavDropdown('conservatorio', 'conservatorio', conservatorio)}
+            {renderNavDropdown('acceso', 'acceso', acceso)}
+            {renderNavDropdown('secretaria', 'secretaria', secretaria)}
+            {renderNavDropdown('multimedia', 'multimedia', multimedia)}
+            {renderNavDropdown('escolaMusica', 'escola', escolaDeMusica)}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  )
 }

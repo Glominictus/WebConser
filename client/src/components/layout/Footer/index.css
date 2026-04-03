@@ -7,7 +7,7 @@
 }
 .footer-up {
     display: flex;
-    background-color: #e1eef4; 
+    background-color: color-mix(in srgb, var(--color-brand) 12%, white);
     height: 100px;
     justify-content: center;
 }
@@ -23,7 +23,7 @@
 }
 
 .footer-down {
-    background-color: #0678a2;
+    background-color: var(--color-brand);
     text-align: center;
     width: 100%;
     line-height: 1.6em;
@@ -31,14 +31,17 @@
 }
 
 .footer-down a {
-    color: black;
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
 }
 
+.footer-down a:hover {
+    text-decoration: underline;
+}
 
 .footer-down p {
     padding: 6px;
-    color: black;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 @media (max-width: 991px) {

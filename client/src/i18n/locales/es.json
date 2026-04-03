@@ -1,0 +1,77 @@
+{
+  "header": {
+    "brandAria": "Inicio — CMUS O Barco de Valdeorras",
+    "acronym": "CMUS",
+    "location": "O Barco de Valdeorras"
+  },
+  "lang": {
+    "selectorAria": "Selector de idioma",
+    "gl": "Gallego",
+    "es": "Castellano"
+  },
+  "nav": {
+    "inicio": "Inicio",
+    "toggle": "Abrir o cerrar el menú",
+    "sections": {
+      "centro": "El centro",
+      "conservatorio": "Conservatorio",
+      "acceso": "Acceso",
+      "secretaria": "Secretaría",
+      "multimedia": "Multimedia",
+      "escolaMusica": "Escuela de música"
+    },
+    "centro": {
+      "novas": "Noticias",
+      "benvida": "Bienvenida",
+      "historia": "Historia",
+      "ondeEstamos": "Dónde estamos",
+      "instalacions": "Instalaciones",
+      "organigrama": "Organigrama",
+      "calendarioActividades": "Calendario de actividades",
+      "formacions": "Formaciones"
+    },
+    "conservatorio": {
+      "ofertaAcademica": "Oferta académica",
+      "planEstudos": "Plan de estudios",
+      "programacionsDidacticas": "Programaciones didácticas",
+      "departamentos": "Departamentos",
+      "horarios": "Horarios",
+      "prezosPublicos": "Precios públicos",
+      "solicitudeTitoria": "Solicitud de tutoría",
+      "horarioTitorias": "Horario de tutorías",
+      "documentos": "Documentos"
+    },
+    "acceso": {
+      "solicitudePraza": "Solicitud de plaza",
+      "primeiroElemental": "1.º grado elemental",
+      "primeiroProfesional": "1.º grado profesional",
+      "outrosCursos": "Otros cursos"
+    },
+    "secretaria": {
+      "bolsas": "Becas",
+      "contacto": "Contacto",
+      "impresos": "Impresos",
+      "titulo": "Título",
+      "lexislacion": "Legislación",
+      "trasladoExpediente": "Traslado de expediente",
+      "validacions": "Validaciones"
+    },
+    "multimedia": {
+      "about": "Acerca de las imágenes y los vídeos",
+      "imaxes": "Imágenes",
+      "videos": "Vídeos"
+    },
+    "escola": {
+      "escola": "Escuela",
+      "planEstudos": "Plan de estudios",
+      "solicitudePraza": "Solicitud de plaza",
+      "solicitudeTitoria": "Solicitud de tutoría",
+      "horarioTitorias": "Horario de tutorías",
+      "cronograma": "Cronograma",
+      "prezosPublicos": "Precios públicos",
+      "documentos": "Documentos",
+      "impresos": "Impresos",
+      "horarios": "Horarios"
+    }
+  }
+}
